@@ -80,6 +80,7 @@ class Main
   def you_lost
     print_message("Bad luck! You have lost. The correct word was #{@game_rules.secret_word.upcase}.")
     Main.new.start if play_again?
+    puts 'Until next time!'
   end
 
   def total_attempts

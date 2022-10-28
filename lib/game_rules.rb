@@ -2,7 +2,7 @@ require_relative 'constants/words_lists'
 
 class GameRules
   include WordsLists
-  attr_accessor :secret_word, :definitive_list
+  attr_reader :secret_word, :definitive_list
 
   def initialize(array)
     @words_amount, @words_length = array
@@ -11,7 +11,7 @@ class GameRules
   def show_words_list
     list = AVAILABLE_LISTS[@words_length.to_sym]
     @definitive_list = list.sample(@words_amount.to_i)
-    @secret_word = definitive_list.sample
+    @secret_word = @definitive_list.sample
 
     print_list_to_console
   end
