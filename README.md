@@ -1,7 +1,5 @@
 # Mastermind-challenge
 
-# Instructions
-
 # Must have
 
 *   Ruby must be installed in your machine
