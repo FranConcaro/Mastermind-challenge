@@ -4,8 +4,9 @@ class GameRules
   include WordsLists
   attr_reader :secret_word, :definitive_list
 
-  def initialize(array)
-    @words_amount, @words_length = array
+  def initialize(difficulty)
+    @words_amount = difficulty[:words_amount]
+    @words_length = difficulty[:words_length]
   end
 
   def show_words_list
